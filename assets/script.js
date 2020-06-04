@@ -14,5 +14,12 @@ function writePassword() {
 
 }
 
+generateBtn.onclick = function passwordString(params) {
+  let passwordLength = prompt("How long would you like your password to be? (Must be between 8-128 characters)");
+    if (passwordLength <8 || passwordLength >128) {
+      alert("Password length must be between 8-128 characters!");
+    } 
+  
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
