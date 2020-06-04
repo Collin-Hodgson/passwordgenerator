@@ -18,7 +18,16 @@ generateBtn.onclick = function passwordString(params) {
   let passwordLength = prompt("How long would you like your password to be? (Must be between 8-128 characters)");
     if (passwordLength <8 || passwordLength >128) {
       alert("Password length must be between 8-128 characters!");
+      repeat;
     } 
+  let confirmLower = confirm("Would you like to include lower case letters in your password?");
+  let confirmUpper = confirm("Would you like to include upper case letters in your password?");
+  let confirmSpecial = confirm("Would you like to include special characters in your password?");
+  let confirmNumber = confirm("Would you like to include number in your password?");
+    if (confirmLower === false && confirmUpper === false && confirmSpecial === false && confirmNumber === false) {
+      alert("You must choose at least 1 form of character for your password!")
+      
+    }
   
 }
 // Add event listener to generate button
