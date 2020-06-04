@@ -15,7 +15,7 @@ function writePassword() {
 
 }
 
-generateBtn.onclick = function passwordString(params) {
+generateBtn.onclick = function generatePassword(params) {
   var passwordLength = prompt("How long would you like your password to be? (Must be between 8-128 characters)");
     while (passwordLength <8 || passwordLength >128) {
       alert("Password length must be between 8-128 characters!");
@@ -36,7 +36,7 @@ generateBtn.onclick = function passwordString(params) {
   if (confirmLower === true) {
     for (let i = 0; i < lowerCase.length; i++) {
       var randomLower = lowerCase [Math.floor(Math.random() * lowerCase.length)];
-      console.log(randomLower)
+      randomPassword += randomLower;
       
     }    
   }
@@ -44,7 +44,7 @@ generateBtn.onclick = function passwordString(params) {
   if (confirmUpper === true) {
     for (let i = 0; i < upperCase.length; i++) {
       var randomUpper = upperCase [Math.floor(Math.random() * upperCase.length)];
-      console.log(randomUpper)
+      randomPassword += randomUpper
       
     }    
   }
@@ -52,7 +52,7 @@ generateBtn.onclick = function passwordString(params) {
   if (confirmSpecial === true) {
     for (let i = 0; i < special.length; i++) {
       var randomSpecial = special [Math.floor(Math.random() * special.length)];
-      console.log(randomSpecial)
+      randomPassword += randomSpecial
       
     }    
   }
@@ -60,7 +60,7 @@ generateBtn.onclick = function passwordString(params) {
   if (confirmNumber === true) {
     for (let i = 0; i < number.length; i++) {
       var randomNumber = number [Math.floor(Math.random() * number.length)];
-      console.log(randomNumber)
+      randomPassword += randomNumber
       
     }    
   }
