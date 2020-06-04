@@ -35,13 +35,35 @@ generateBtn.onclick = function passwordString(params) {
     }
   if (confirmLower === true) {
     for (let i = 0; i < lowerCase.length; i++) {
-      var randomLower = lowerCase[Math.floor(Math.random() * lowerCase.length)];
+      var randomLower = lowerCase [Math.floor(Math.random() * lowerCase.length)];
       console.log(randomLower)
       
     }    
   }
 
-  
+  if (confirmUpper === true) {
+    for (let i = 0; i < upperCase.length; i++) {
+      var randomUpper = upperCase [Math.floor(Math.random() * upperCase.length)];
+      console.log(randomUpper)
+      
+    }    
+  }
+
+  if (confirmSpecial === true) {
+    for (let i = 0; i < special.length; i++) {
+      var randomSpecial = special [Math.floor(Math.random() * special.length)];
+      console.log(randomSpecial)
+      
+    }    
+  }
+
+  if (confirmNumber === true) {
+    for (let i = 0; i < number.length; i++) {
+      var randomNumber = number [Math.floor(Math.random() * number.length)];
+      console.log(randomNumber)
+      
+    }    
+  }
   
 }
 
