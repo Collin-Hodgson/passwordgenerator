@@ -5,6 +5,7 @@ const upperCase = ['A', 'B', 'C', 'E', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'L', '
 const special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 const number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -32,10 +33,17 @@ generateBtn.onclick = function passwordString(params) {
       var confirmNumber = confirm("Would you like to include number in your password?");
       
     }
+  if (confirmLower === true) {
+    for (let i = 0; i < lowerCase.length; i++) {
+      var randomLower = lowerCase[Math.floor(Math.random() * lowerCase.length)];
+      console.log(randomLower)
+      
+    }    
+  }
+
+  
   
 }
-
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
