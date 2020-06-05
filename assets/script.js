@@ -5,9 +5,6 @@ const upperCase = ['A', 'B', 'C', 'E', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'L', '
 const special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 const number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
-
-
-
 function generatePassword() {
 
   var randomPassword = "";
@@ -31,36 +28,35 @@ function generatePassword() {
       
     }
 
-while (randomPassword.length < passwordLength) {
+  while (randomPassword.length < passwordLength) {
 
-        if (confirmLower === true && randomPassword.length < passwordLength) {
-            var randomLower = lowerCase [Math.floor(Math.random() * lowerCase.length)];
-            randomPassword += randomLower;       
-        }
-
-        if (confirmUpper === true && randomPassword.length < passwordLength) {
-            var randomUpper = upperCase [Math.floor(Math.random() * upperCase.length)];
-            randomPassword += randomUpper;    
+      if (confirmLower === true && randomPassword.length < passwordLength) {
+        var randomLower = lowerCase [Math.floor(Math.random() * lowerCase.length)];
+        randomPassword += randomLower;       
         }
 
-        if (confirmSpecial === true && randomPassword.length < passwordLength) {
-            var randomSpecial = special [Math.floor(Math.random() * special.length)];
-            randomPassword += randomSpecial   
+      if (confirmUpper === true && randomPassword.length < passwordLength) {
+        var randomUpper = upperCase [Math.floor(Math.random() * upperCase.length)];
+        randomPassword += randomUpper;    
         }
 
-        if (confirmNumber === true && randomPassword.length < passwordLength) {
-            var randomNumber = number [Math.floor(Math.random() * number.length)];
-            randomPassword += randomNumber   
+      if (confirmSpecial === true && randomPassword.length < passwordLength) {
+        var randomSpecial = special [Math.floor(Math.random() * special.length)];
+        randomPassword += randomSpecial   
         }
-        if (randomPassword.length < passwordLength) {
-          continue;
+
+      if (confirmNumber === true && randomPassword.length < passwordLength) {
+        var randomNumber = number [Math.floor(Math.random() * number.length)];
+        randomPassword += randomNumber   
         }
-        else {
-          console.log(randomPassword);
-          return randomPassword;
+      if (randomPassword.length < passwordLength) {
+        continue;
         }
-        
-     }
+      else {
+        console.log(randomPassword);
+        return randomPassword;
+      }   
+    }
 }
 
 // Write password to the #password input
