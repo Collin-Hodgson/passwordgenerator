@@ -5,6 +5,25 @@ const upperCase = ['A', 'B', 'C', 'E', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'L', '
 const special = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')'];
 const number = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
+function getRandomInt(n) {
+  return Math.floor(Math.random() * n);
+}
+function shuffle(s) {
+  var arr = s.split('');           
+  var n = arr.length;    
+
+  for(var i=0 ; i<n-1 ; i++) {
+    var j = getRandomInt(n);       
+    
+    var temp = arr[i];             
+    arr[i] = arr[j];
+    arr[j] = temp;
+  }
+  
+  s = arr.join('');                
+  return s;                        
+}
+
 function generatePassword() {
 
   var randomPassword = "";
@@ -62,6 +81,7 @@ function generatePassword() {
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  password = shuffle(password);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
